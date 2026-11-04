@@ -9,13 +9,6 @@
 # opencv-python, the two packages conflict.
 mediapipe==0.10.21
 opencv-contrib-python==4.10.0.84
-# MediaPipe depends on jax/jaxlib without a version limit; the newest ones
-# need numpy 2, so pip would download dozens of old versions looking for a
-# match. Pinning them makes the install fast and predictable.
-jax==0.4.38
-jaxlib==0.4.38
-ml_dtypes==0.5.1
-scipy==1.14.1
 
 # Numerics and data analysis. MediaPipe 0.10.21 requires numpy < 2.
 numpy==1.26.4
