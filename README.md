@@ -42,7 +42,7 @@ without drawing, open palm clears.
 Collecting data:
 
 ```bash
-python collect_data.py --writer <yourname> --per-digit 10
+python collect_data.py --writer <yourname> --per-digit 20
 ```
 
 Walks through digits 0-9. SPACE saves, `c` clears, `n` next digit, `b` back,

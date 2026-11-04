@@ -1,6 +1,6 @@
 # Instrukcja dla zespołu: instalacja i zbieranie danych
 
-Czas: około 30 min instalacja + 20-30 min nagrywanie cyfr.
+Czas: około 30 min instalacja + 40-60 min nagrywanie cyfr.
 
 ## 1. Co trzeba mieć
 
@@ -50,10 +50,10 @@ prawdziwe wyniki i nie wolno ich cytować w raporcie.
 Imię wpisz **małymi literami, bez polskich znaków i spacji** (np. `kasia`, `jan`):
 
 ```bash
-python collect_data.py --writer <imie> --per-digit 10
+python collect_data.py --writer <imie> --per-digit 20
 ```
 
-Skrypt prowadzi przez cyfry 0-9, po 10 próbek każdej (razem 100 obrazków).
+Skrypt prowadzi przez cyfry 0-9, po 20 próbek każdej (razem 200 obrazków).
 
 | Klawisz | Działanie |
 |---|---|
@@ -68,7 +68,7 @@ Zasady (ważne dla wyników):
   właśnie tę różnicę mierzymy.
 - Nie zmieniaj `STROKE_THICKNESS` ani `SMOOTHING_WINDOW` w `config.py`: wszyscy muszą
   nagrywać z tymi samymi ustawieniami.
-- Na koniec zajrzyj do `data/raw/<imie>/`: każdy folder 0-9 powinien mieć 10 plików.
+- Na koniec zajrzyj do `data/raw/<imie>/`: każdy folder 0-9 powinien mieć 20 plików.
   Usuń tylko ewidentnie zepsute (pusty lub urwany rysunek) i zapisz, ile usunąłeś.
   Brakujące dograj, uruchamiając skrypt jeszcze raz.
 
