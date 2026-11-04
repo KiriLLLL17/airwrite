@@ -1,0 +1,29 @@
+# Python 3.11 (3.10 also works). MediaPipe 0.10.21 has no wheels for
+# Python 3.13+, and newer MediaPipe releases dropped the `mp.solutions` API
+# that whiteboard.py uses - so both are pinned on purpose.
+#
+# Exact versions are pinned so that results are reproducible.
+
+# Acquisition (whiteboard, data collection). MediaPipe pulls in
+# opencv-contrib-python, which provides cv2 - do not also install
+# opencv-python, the two packages conflict.
+mediapipe==0.10.21
+opencv-contrib-python==4.10.0.84
+# MediaPipe depends on jax/jaxlib without a version limit; the newest ones
+# need numpy 2, so pip would download dozens of old versions looking for a
+# match. Pinning them makes the install fast and predictable.
+jax==0.4.38
+jaxlib==0.4.38
+ml_dtypes==0.5.1
+scipy==1.14.1
+
+# Numerics and data analysis. MediaPipe 0.10.21 requires numpy < 2.
+numpy==1.26.4
+pandas==2.2.3
+scikit-learn==1.5.2
+joblib==1.4.2
+matplotlib==3.9.2
+
+# Deep learning. On Colab, the preinstalled versions are used instead.
+torch==2.5.1
+torchvision==0.20.1

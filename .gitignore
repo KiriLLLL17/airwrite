@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+
+# Downloaded datasets and generated artefacts: regenerate, don't commit.
+data/mnist/
+data/processed/
+models/*.pt
+
+# Our own collected digits ARE committed - they are the dataset and must be
+# submitted with the project.
+!data/raw/
+models/*.joblib
+
+# Smoke tests and synthetic stand-in runs: never part of the results.
+models/smoke/
+results/smoke/
+figures/smoke/
+results/synthetic/
+figures/synthetic/
