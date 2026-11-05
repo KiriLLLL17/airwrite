@@ -8,6 +8,8 @@ venv/
 data/mnist/
 data/processed/
 models/*.pt
+# Except the checkpoint the live demo (whiteboard --predict) loads.
+!models/cnn_mnist_seed42.pt
 
 # Our own collected digits ARE committed - they are the dataset and must be
 # submitted with the project.
