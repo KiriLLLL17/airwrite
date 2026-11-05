@@ -7,17 +7,6 @@ Done: code, data collection (4 writers, 807 images), one full run of
 `train.py` → `ablation.py` → `analysis.py`. Every number in the report must come from
 `results/`; every figure from `figures/`.
 
-Owners follow the split proposed in the team chat (confirm or change it in
-`division-of-work.md`):
-
-| Person | Main responsibility |
-|---|---|
-| Kirill | Results analysis, section 3 (Experimental Results and Analysis) |
-| Mateusz | Section 1 (Introduction), section 2 (Method: data collection, preprocessing) |
-| Kacper | Section 2 (Method: models, training), section 4 (Discussion and Conclusion) |
-| Roman | Conclusion polish, references, slides, packaging and submission |
-| Claude | Live demo (`whiteboard.py --predict`), code housekeeping |
-
 ---
 
 ## 1. What the results say (read this first)
@@ -48,9 +37,9 @@ The story is different from the proposal, and that is fine as long as we say so:
 
 ---
 
-## 2. Analysis to do (Kirill)
+## 2. Analysis to do
 
-Work on a branch, open a PR. Any new number must be produced by a script in the repo
+Work on a branch and open a PR. Any new number must be produced by a script in the repo
 that writes to `results/` (not computed by hand or in a notebook cell that is not committed).
 
 **Must have**
@@ -95,14 +84,14 @@ that writes to `results/` (not computed by hand or in a notebook cell that is no
 
 Use **exactly** this structure (course template). Header: title, all names, student IDs, classes.
 
-### 1. Introduction (Mateusz)
+### 1. Introduction
 - [ ] Problem: classifiers trained on clean scanned digits used on a different input
       device; why domain shift matters (touchless input, AR/VR, accessibility).
 - [ ] Our approach in 2-3 sentences: own gesture whiteboard → own dataset → measure the gap →
       ablation of mitigations.
 - [ ] Main findings in 2 sentences (numbers from section 1 above).
 
-### 2. Method (Mateusz + Kacper)
+### 2. Method
 - [ ] **Data acquisition**: MediaPipe Hands, gestures, smoothing, canvas, `collect_data.py`,
       collection protocol ("write naturally"), 4 writers × 20 per digit.
 - [ ] **Models with justification against common practice**: logistic regression as the
@@ -115,7 +104,7 @@ Use **exactly** this structure (course template). Header: title, all names, stud
       thickness-normalisation step, the ablation design.
 - [ ] One pipeline diagram (camera → hand landmarks → strokes → image → preprocessing → model).
 
-### 3. Experimental Results and Analysis (Kirill)
+### 3. Experimental Results and Analysis
 - [ ] Datasets: MNIST (60k/10k) and ours (807 images, 4 writers, class balance,
       `samples_by_writer.png`).
 - [ ] Evaluation criteria: accuracy and macro-F1, mean ± std over 3 seeds.
@@ -123,7 +112,7 @@ Use **exactly** this structure (course template). Header: title, all names, stud
 - [ ] The gap, the ablation table, confusion matrices, everything from section 2 above.
 - [ ] Every table/figure numbered, captioned, and referred to in the text.
 
-### 4. Discussion and Conclusion (Kacper)
+### 4. Discussion and Conclusion
 - [ ] Summary of findings.
 - [ ] Original contribution: new in-air digit dataset, measured domain gap, ablation.
 - [ ] Strengths: own real-world data, controlled ablation, 3 seeds, everything reproducible.
@@ -133,7 +122,7 @@ Use **exactly** this structure (course template). Header: title, all names, stud
 - [ ] Lessons learned; future work (more writers, raw trajectories instead of rendered
       images, sequence models, noisier capture conditions).
 
-### 5. References (Roman, one consistent style)
+### 5. References (one consistent style)
 - [ ] LeCun et al. 1998 (MNIST / LeNet), Simard et al. 2003 (elastic distortions),
       Zhang et al. 2020 (MediaPipe Hands), PyTorch, scikit-learn, OpenCV, NumPy, pandas,
       Matplotlib. Cite any reused code.
@@ -141,7 +130,7 @@ Use **exactly** this structure (course template). Header: title, all names, stud
 ### Report checks
 - [ ] Every number appears in a file under `results/` (no rounding errors, no numbers from
       `smoke/` or `synthetic/`).
-- [ ] Each member reviews the section about their part.
+- [ ] Whoever wrote the code behind a section checks that section for accuracy.
 - [ ] Short "Contributions" paragraph (also needed in the submission email).
 
 ---
@@ -155,7 +144,7 @@ Use **exactly** this structure (course template). Header: title, all names, stud
 | ≥ 2 AI/data libraries | ✅ PyTorch, scikit-learn, NumPy, pandas, Matplotlib |
 | Code runs correctly | ✅ full run completed; re-check on a fresh clone before submitting |
 | Reproducible (seeds, pinned versions) | ✅ seeds fixed, `requirements.txt` pinned |
-| Sufficient comments | ☐ **each person reviews their own files** |
+| Sufficient comments | ☐ review every `.py` file: module docstring, function docstrings, comments on non-obvious steps |
 | No fabricated/modified results | ✅ keep it that way: numbers only from `results/` |
 | AI / data analysis applied to our field of study | ☐ state the link explicitly in the Introduction |
 | Clear goal of the program | ✅ research question in README / CLAUDE.md |
@@ -171,7 +160,9 @@ Use **exactly** this structure (course template). Header: title, all names, stud
 
 ## 5. Code and repository housekeeping
 
-- [ ] `whiteboard.py --predict`: live prediction for the demo (Claude).
+- [ ] `whiteboard.py --predict`: live prediction for the demo. Show the predicted digit and
+      confidence while the hand pauses (fist), using
+      `predict(preprocess(board.extract_digit(), FULL_STEPS))` and `models/cnn_mnist_seed42.pt`.
 - [ ] Record a 30-60 s backup video of the demo in case the camera fails on stage.
 - [ ] Update `README.md` / `CLAUDE.md` status (webcam now verified, data collected,
       results in). Add how the results were produced (CPU, Python 3.11, seeds 42-44).
@@ -184,12 +175,12 @@ Use **exactly** this structure (course template). Header: title, all names, stud
 ## 6. Presentation (10 minutes, everyone on stage)
 
 - [ ] Slides: problem (1), method and tool (2), results (3), live demo (1), conclusions (1).
-- [ ] Each person presents their own part.
+- [ ] Every member speaks; each explains the part they worked on.
 - [ ] One rehearsal with a timer.
 
 ---
 
-## 7. Submission (Roman, by 13 Nov 23:59)
+## 7. Submission (by 13 Nov 23:59)
 
 Two places, different contents:
 
