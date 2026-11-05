@@ -81,7 +81,7 @@ thickening, shifting and rescaling MNIST digits.
 
 1. [A] confirms `collect_data.py` works and tells the others.
 2. Each member runs
-   `python collect_data.py --writer <name> --per-digit 10`
+   `python collect_data.py --writer <name> --per-digit 20`
    and writes 75-100 digits total.
 3. **Write naturally.** Do not imitate MNIST — that would destroy the
    experiment.
@@ -89,7 +89,7 @@ thickening, shifting and rescaling MNIST digits.
 5. [D] checks that every digit has a comparable number of samples per writer.
 6. [D] builds `data/labels.csv` with columns: path, label, writer.
 
-Target: 300-400 images from 4 writers.
+Target: 800 images from 4 writers (20 per digit each).
 
 ---
 

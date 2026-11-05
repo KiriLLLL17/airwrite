@@ -40,13 +40,13 @@ Target: a presentable version in **3 days**.
 
 ## Day 1: data
 
-### Everyone: collect your digits (20-30 min each)
+### Everyone: collect your digits (40-60 min each)
 
 ```bash
-python collect_data.py --writer <yourname> --per-digit 10
+python collect_data.py --writer <yourname> --per-digit 20
 ```
 
-- 10 samples of each digit = 100 images per person.
+- 20 samples of each digit = 200 images per person (80 per digit, 800 in total).
 - **Write naturally, at your normal speed.** Do not try to make the digits
   look like MNIST, because measuring that difference is the whole point.
 - Afterwards check `data/raw/<yourname>/`: every digit folder should hold
@@ -116,7 +116,7 @@ Files: `analysis.py`, `plotting.py`, the report, the slides.
    `ablation_summary.csv` and `lowo_summary.csv`. Do not round in your
    head and do not quote anything that is not in those files.
 3. Write **Discussion and Conclusion** with honest limitations: 4 writers,
-   about 400 images, one webcam, one lighting setup, a single session per
+   about 800 images, one webcam, one lighting setup, a single session per
    writer.
 4. Fill in names, IDs and classes everywhere.
 

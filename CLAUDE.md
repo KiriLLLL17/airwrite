@@ -94,7 +94,7 @@ collection time.
       hardware**: MediaPipe tracking has not yet been run with a webcam)
 - [x] Phase 2 - CNN, logistic-regression baseline, training (`train.py`)
 - [x] Phase 3 - preprocessing pipeline, augmentation (`preprocessing.py`)
-- [ ] Phase 4 - data collection, all 4 members, ~100 digits each
+- [ ] Phase 4 - data collection, all 4 members, 200 digits each (20 per digit)
 - [x] Phase 5 code - `ablation.py` (zero-shot ablation, fine-tuning,
       leave-one-writer-out). Tested on synthetic stand-in data only.
 - [x] Phase 6 code - `analysis.py`. Tested on synthetic stand-in data only.
