@@ -1,0 +1,5 @@
+model,variant,mean_conf_correct,mean_conf_wrong,errors_per_seed,share_of_errors_confident
+cnn,minimal,0.97049856,0.7299127,23.0,0.21739130434782608
+cnn,thickness,0.98765606,0.7582064,23.0,0.2608695652173913
+cnn,centering,0.98174405,0.5626032,9.0,0.0
+cnn,full,0.9918058,0.76634526,3.0,0.3333333333333333

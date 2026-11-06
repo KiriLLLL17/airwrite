@@ -1,0 +1,2 @@
+model,seed,file
+cnn,42,cnn_mnist_seed42.pt
