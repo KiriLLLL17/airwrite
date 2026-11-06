@@ -1,6 +1,6 @@
 # results/metrics
 
-Written by `metrics_analysis.py` (person C). Read `results_analysis.ipynb` for
+Written by `metrics_analysis.py` (Kirill Riabkov, person C). Read `results_analysis.ipynb` for
 tables, figures and conclusions.
 
 **Current status: preview.** Only `models/cnn_mnist_seed42.pt` is committed to

@@ -1,7 +1,7 @@
 """
 Metrics, seed aggregation and confusion matrices.
 
-Owner: person C.
+Owner: Kirill Riabkov (person C).
 
 Reported metrics: accuracy, macro-F1 and per-class F1. Every configuration
 is run with 3 seeds and reported as mean +/- std, so that differences between

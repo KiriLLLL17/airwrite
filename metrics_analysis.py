@@ -2,7 +2,7 @@
 Extended evaluation of the zero-shot results: uncertainty, significance,
 per-writer breakdown, error analysis and robustness.
 
-Owner: person C (evaluation).
+Owner: Kirill Riabkov (person C, evaluation).
 
 Why this script exists
 ----------------------
